@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DITTO - Streetwear Aesthetic</title>
+    <style>
+        :root {
+            --fondo-claro: #f5f5f5;
+            --texto-claro: #111;
+            --fondo-oscuro: #111;
+            --texto-oscuro: #f5f5f5;
+            --rojo: #e63946;
+            --azul: #457b9d;
+            --beige: #f0e5d8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--fondo-claro);
+            color: var(--texto-claro);
+            transition: all 0.3s ease;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: var(--texto-claro);
+            color: var(--fondo-claro);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background: var(--beige);
+        }
+
+        nav a, .toggle-mode {
+            text-decoration: none;
+            color: var(--texto-claro);
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .hero {
+            height: 60vh;
+            background: var(--beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--texto-claro);
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .products, .reviews {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            width: 230px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .review {
+            background: white;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 300px;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background: var(--texto-claro);
+            color: var(--fondo-claro);
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        body.dark-mode {
+            background-color: var(--fondo-oscuro);
+            color: var(--texto-oscuro);
+        }
+
+        body.dark-mode header, body.dark-mode footer {
+            background: var(--texto-oscuro);
+            color: var(--fondo-oscuro);
+        }
+
+        body.dark-mode nav {
+            background: var(--texto-claro);
+            color: var(--fondo-oscuro);
+        }
+
+        body.dark-mode .product {
+            background: #222;
+            color: var(--texto-oscuro);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    DITTO
+    <p>Streetwear & Aesthetic</p>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Colección</a>
+    <a href="#">Buscar</a>
+    <a href="#">Filtros</a>
+    <a href="#" class="toggle-mode" onclick="toggleMode()">Modo Claro/Oscuro</a>
+</nav>
+
+<div class="hero">
+    Nueva Colección 2025 (o el mensaje que quieras)
+</div>
+
+<section class="products">
+    <h2>Productos</h2>
+    <p>No hay productos disponibles por el momento.</p>
+</section>
+
+<section class="reviews">
+    <h2>Opiniones de Clientes</h2>
+    <p>No hay opiniones aún.</p>
+</section>
+
+<footer>
+    <p>Síguenos en <a href="https://youtube.com/@shay14115?si=ShRCRpLncqnEaNEt" target="_blank" style="color: var(--rojo);">YouTube</a></p>
+    <p>&copy; 2025 DITTO - Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
+</body>
+</html>
